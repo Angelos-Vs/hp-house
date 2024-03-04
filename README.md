@@ -1,4 +1,4 @@
-# HP_Houses#
+# HP_Houses
 
 This is an app that was created to practice with rest APIs and dynamic data fetching and rendering, as a task of a recent job interview.
 It is rendering the Harry Potter Houses along with some extra information about each house which are provided from the API.
