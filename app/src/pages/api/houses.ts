@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/houses';
+const API_URL = 'https://wizard-world-api.herokuapp.com/houses';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { name } = req.query;
