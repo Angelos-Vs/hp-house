@@ -13,3 +13,4 @@ It is rendering the Harry Potter Houses along with some extra information about 
 6. Run `npm run dev`
 7. Open browser and go to `http://localhost:3000` , or ctrl+click the link in terminal
 
+This is the link of the Vercel deployment of the app to see it running online : https://hp-house.vercel.app/
