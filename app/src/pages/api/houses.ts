@@ -7,8 +7,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { name } = req.query;
 
   try {
-    const response = await axios.get(`${API_URL}${name ? `?name=${name}` : ''}`);
-    res.status(200).json(response.data);
+    const response = await axios.get(API_URL);
+    let filteredHouses = response.data;
+    if (name) {
+      filteredHouses = filteredHouses.filter((house: any) =>
+        house.name.toLowerCase().includes(name.toString().toLowerCase())
+      );
+    }
+    res.status(200).json(filteredHouses);
   } catch (error) {
     console.error('Error fetching houses:', error);
     res.status(500).json({ error: 'Internal Server Error' });
